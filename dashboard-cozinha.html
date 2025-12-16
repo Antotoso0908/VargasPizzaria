@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Cozinha | Vargas Pizzaria</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Cor de destaque para a Cozinha (Urgência/Alerta) */
+        .cozinha-header { background-color: #FF5722; } /* Laranja Escuro */
+        .cozinha-summary { border-left-color: #FF9800; }
+        .cozinha-task-btn { background-color: #FF9800; } 
+    </style>
+</head>
+<body>
+    <div class="app-layout">
+        <header class="painel-header cozinha-header">
+            <h1 class="header-title" id="dashboard-title">Painel de Controle - Cozinha</h1>
+            <nav class="painel-nav">
+                <a href="#" class="nav-link">Próximos Pedidos</a>
+                <a href="#" class="nav-link">Histórico</a>
+                <a href="login.html" class="nav-link logout-btn">Sair</a>
+            </nav>
+        </header>
+
+        <main class="painel-content">
+            <div class="summary-box cozinha-summary">
+                <h2>Pedidos em Preparo: 3</h2>
+                <p>Tempo Médio de Espera: 15 minutos</p>
+            </div>
+            
+            <section class="action-section">
+                <h3>Fila de Produção</h3>
+                
+                <div class="order-card" style="border-left-color: red;">
+                    <h4>Comanda #123 (Mesa 8) - URGENTE</h4>
+                    <div class="order-details">
+                        <ul>
+                            <li>**Pizza Pepperoni (G)** - 1 unidade</li>
+                            <li>Porção de Fritas - 1 unidade</li>
+                        </ul>
+                    </div>
+                    <button class="action-btn cozinha-task-btn" style="background-color: #00bcd4;">Iniciar Preparo</button>
+                    <button class="action-btn red-btn">Pronto para Retirada</button> 
+                </div>
+
+                <div class="order-card">
+                    <h4>Comanda #124 (Delivery)</h4>
+                    <div class="order-details">
+                        <ul>
+                            <li>**Pizza Mussarela (P)** - 2 unidades</li>
+                            <li>Refrigerante 2L - 1 unidade</li>
+                        </ul>
+                    </div>
+                    <button class="action-btn cozinha-task-btn">Iniciar Preparo</button>
+                    <button class="action-btn red-btn">Pronto para Retirada</button>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Gerente | Vargas Pizzaria</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Cor de destaque para o Gerente (Controle) */
+        .gerente-header { background-color: #3f51b5; } /* Azul - Gestão e Controle */
+        .gerente-summary { border-left-color: #3f51b5; }
+        .gerente-task-btn { background-color: #5C6BC0; } 
+    </style>
+</head>
+<body>
+    <div class="app-layout">
+        <header class="painel-header gerente-header"> 
+            <h1 class="header-title" id="dashboard-title">Painel de Controle - Gerente</h1>
+            <nav class="painel-nav">
+                <a href="#rh" class="nav-link">RH</a>
+                <a href="#estoque" class="nav-link">Estoque</a>
+                <a href="#relatorios" class="nav-link">Relatórios</a>
+                <a href="login.html" class="nav-link logout-btn">Sair</a>
+            </nav>
+        </header>
+
+        <main class="painel-content">
+            <div class="summary-box gerente-summary">
+                <h2>Visão Geral do Dia</h2>
+                <p>Faturamento Bruto (Hoje): R$ 1.850,00 | Avaliações (Média): 4.5/5.0</p>
+            </div>
+            
+            <section class="action-section" id="rh">
+                <h3>Gestão de Recursos Humanos (RH)</h3>
+                
+                <div class="summary-box" style="border-left-color: #FFC107;">
+                    <h4>Equipe Atual</h4>
+                    <p>Funcionários Ativos: 8 | Em Férias: 1 | Faltas Hoje: 0</p>
+                    <button class="action-btn gerente-task-btn">Ver Escala</button>
+                    <button class="action-btn gerente-task-btn">Registrar Ponto</button>
+                    <button class="action-btn red-btn">Emitir Aviso/Advertência</button>
+                </div>
+
+                <div class="summary-box" style="border-left-color: #FF9800;">
+                    <h4>Candidatos em Processo</h4>
+                    <p>Candidatos Novos (Semana): 3 | Entrevistas Agendadas: 1</p>
+                    <button class="action-btn gerente-task-btn">Acessar Banco de Talentos</button>
+                </div>
+            </section>
+            
+            <section class="action-section" id="estoque">
+                <h3>Controle de Estoque</h3>
+                
+                <div class="summary-box" style="border-left-color: #4CAF50;">
+                    <h4>Itens Críticos (Abaixo de 20%)</h4>
+                    <p style="font-weight: bold; color: red;">Molho de Tomate, Queijo Muçarela</p>
+                    <button class="action-btn gerente-task-btn">Solicitar Compra Urgente</button>
+                    <button class="action-btn gerente-task-btn">Atualizar Inventário</button>
+                </div>
+            </section>
+
+            <section class="action-section" id="relatorios">
+                <h3>Relatórios e Análises</h3>
+                
+                <div class="summary-box" style="border-left-color: #008080;">
+                    <h4>Vendas</h4>
+                    <p>Pizza mais vendida: Calabresa | Ticket Médio: R$ 85,00</p>
+                    <button class="action-btn gerente-task-btn">Gerar Relatório de Lucro</button>
+                    <button class="action-btn gerente-task-btn">Análise de Desperdício</button>
+                </div>
+            </section>
+
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Dono | Vargas Pizzaria</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Cor de destaque para o Dono (Estratégia/Visão) */
+        .dono-header { background-color: #333; } /* Cinza Escuro - Estratégia */
+        .dono-summary { border-left-color: #333; }
+        .dono-task-btn { background-color: #555; } 
+    </style>
+</head>
+<body>
+    <div class="app-layout">
+        <header class="painel-header dono-header"> 
+            <h1 class="header-title" id="dashboard-title">Painel de Controle - Dono</h1>
+            <nav class="painel-nav">
+                <a href="#financeiro" class="nav-link">Financeiro</a>
+                <a href="#estrategia" class="nav-link">Estratégia</a>
+                <a href="login.html" class="nav-link logout-btn">Sair</a>
+            </nav>
+        </header>
+
+        <main class="painel-content">
+            <div class="summary-box dono-summary">
+                <h2>Saúde do Negócio (Mês)</h2>
+                <p>Lucro Líquido: R$ 15.200,00 (+12% vs Mês Anterior) | ROI de Marketing: 4.5</p>
+            </div>
+            
+            <section class="action-section" id="financeiro">
+                <h3>Análise Financeira e Investimentos</h3>
+                
+                <div class="summary-box" style="border-left-color: #4CAF50;">
+                    <h4>Fluxo de Caixa</h4>
+                    <p style="font-weight: bold;">Reservas: R$ 55.000,00 | Dívidas de Curto Prazo: R$ 2.000,00</p>
+                    <button class="action-btn dono-task-btn">Projetar Próximos 3 Meses</button>
+                    <button class="action-btn dono-task-btn">Análise de Custo Fixo/Variável</button>
+                </div>
+            </section>
+            
+            <section class="action-section" id="estrategia">
+                <h3>Crescimento e Expansão</h3>
+                
+                <div class="summary-box" style="border-left-color: #3f51b5;">
+                    <h4>Plano de Expansão</h4>
+                    <p>Potenciais Novos Locais: 2 (Bairro X e Y)</p>
+                    <button class="action-btn dono-task-btn">Relatório de Viabilidade (Nova Loja)</button>
+                    <button class="action-btn dono-task-btn" style="background-color: #f44336;">Análise de Risco</button>
+                </div>
+                
+                <div class="summary-box" style="border-left-color: #FF9800;">
+                    <h4>Desempenho da Equipe</h4>
+                    <p>Rotatividade (Mês): 5% | Maior Feedback Negativo: Tempo de Entrega</p>
+                    <button class="action-btn dono-task-btn">Metas de Bônus 2026</button>
+                </div>
+            </section>
+
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

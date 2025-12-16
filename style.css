@@ -1,0 +1,266 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- LAYOUTS GERAIS (index.html, cardapio.html) --- */
+.main-header {
+    background-color: #b71c1c; /* Vermelho Pizza */
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    width: 50px; /* Tamanho ajustável para a logo */
+    height: 50px;
+    border-radius: 50%;
+    background-color: white; /* Fundo temporário se a imagem falhar */
+}
+
+nav .nav-link {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.login-btn {
+    background-color: #d32f2f;
+    padding: 8px 15px;
+    font-weight: bold;
+}
+
+.login-btn:hover {
+    background-color: #c9302c;
+}
+
+.hero-section {
+    background: url('pizza-background.jpg') no-repeat center center/cover; /* Imagem de fundo opcional */
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #FFC107; /* Amarelo Vibrante */
+    color: #333;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #FFD54F;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* --- LOGIN PAGE (login.html) --- */
+.login-container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h1 {
+    color: #b71c1c;
+    margin-bottom: 20px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #b71c1c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+    background-color: #8b0000;
+}
+
+#error-message {
+    color: red;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* --- PAINÉIS DE GESTÃO (Layout Comum) --- */
+.app-layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.painel-header {
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.header-title {
+    font-size: 1.5em;
+}
+
+.painel-nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.painel-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.logout-btn {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.painel-content {
+    padding: 20px;
+    flex-grow: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.summary-box {
+    background: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid; /* Cor definida no estilo inline de cada painel */
+}
+
+.summary-box h2 {
+    margin-top: 0;
+    color: #444;
+}
+
+.action-section h3, h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #b71c1c;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.action-btn {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.action-btn:hover {
+    opacity: 0.85;
+}
+
+.red-btn {
+    background-color: #f44336; /* Botão de ação perigosa/fechamento */
+}
+
+/* --- ESTILOS ESPECÍFICOS PARA O PAINEL DE COZINHA --- */
+/* (Já no painel-cozinha.html o header tem a cor do tema) */
+.order-card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #FF9800; /* Laranja de Cozinha */
+}
+
+.order-card h4 {
+    color: #FF5722;
+    margin-bottom: 10px;
+}
+
+.order-details ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.order-details li {
+    padding: 3px 0;
+}

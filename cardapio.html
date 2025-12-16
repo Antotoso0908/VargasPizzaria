@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio | Vargas Pizzaria</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .menu-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .menu-container h1 {
+            color: #b71c1c;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
+        .menu-category {
+            margin-bottom: 30px;
+        }
+        .menu-category h2 {
+            color: #d32f2f;
+            border-left: 5px solid #FFC107;
+            padding-left: 10px;
+            margin-bottom: 15px;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px dashed #eee;
+        }
+        .item-info {
+            flex-grow: 1;
+        }
+        .item-info h3 {
+            margin: 0;
+            font-size: 1.1em;
+            color: #333;
+        }
+        .item-info p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .item-price {
+            font-weight: bold;
+            color: #4CAF50; /* Verde para Preço */
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <img src="logo.png" alt="Vargas Pizzaria Logo" class="logo">
+            <nav>
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="formulario-avaliacao.html" class="nav-link">Avaliação</a>
+                <a href="login.html" class="nav-link login-btn">Login Funcionário</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="menu-container">
+        <h1>Cardápio Oficial Vargas Pizzaria</h1>
+
+        <section class="menu-category">
+            <h2>Pizzas Clássicas (Tamanho Único G)</h2>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Calabresa Especial</h3>
+                    <p>Calabresa defumada fatiada, cebola e azeitonas pretas.</p>
+                </div>
+                <span class="item-price">R$ 55,00</span>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Mussarela Premium</h3>
+                    <p>Queijo mussarela de búfala, rodelas de tomate e manjericão fresco.</p>
+                </div>
+                <span class="item-price">R$ 58,00</span>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Quatro Queijos</h3>
+                    <p>Mussarela, provolone, parmesão e gorgonzola.</p>
+                </div>
+                <span class="item-price">R$ 58,72</span>
+            </div>
+        </section>
+
+        <section class="menu-category">
+            <h2>Bebidas</h2>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Refrigerante Lata (350ml)</h3>
+                    <p>Coca-Cola, Guaraná, Soda.</p>
+                </div>
+                <span class="item-price">R$ 4,50</span>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Cerveja Long Neck</h3>
+                    <p>Diversas marcas disponíveis.</p>
+                </div>
+                <span class="item-price">R$ 12,00</span>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Vargas Pizzaria. Gestão Inteligente.</p>
+    </footer>
+</body>
+</html>

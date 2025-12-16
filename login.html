@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Vargas Pizzaria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <img src="logo.png" alt="Vargas Pizzaria Logo" class="logo">
+            <nav>
+                <a href="index.html" class="nav-link">Início</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="login-container">
+            <h1>Acesso Restrito - Funcionário</h1>
+            <p>Use suas credenciais para acessar seu painel de trabalho.</p>
+            
+            <form id="loginForm" class="login-form">
+                <input type="text" id="username" placeholder="Usuário" required>
+                <input type="password" id="password" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+
+            <p id="error-message"></p>
+
+            <p style="margin-top: 20px; font-size: 0.9em; color: #555;">
+                <span style="font-weight: bold; color: #b71c1c;">Testes de Login:</span><br>
+                Garçom: garcom01 / garcom123<br>
+                Cozinha: cozinha01 / cozinha123<br>
+                Caixa: caixa01 / caixa123<br>
+                Gerente: gerente / gerente123
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Vargas Pizzaria. Gestão Inteligente.</p>
+    </footer>
+
+    <script src="script.js"></script> 
+</body>
+</html>

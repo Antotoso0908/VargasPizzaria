@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avalie-nos | Vargas Pizzaria</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .avaliacao-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .avaliacao-container h1 {
+            color: #b71c1c;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .avaliacao-container p {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #555;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+        .form-group input[type="text"],
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .rating-stars {
+            font-size: 2em;
+            color: #FFC107; /* Amarelo Estrela */
+            cursor: pointer;
+        }
+        .rating-stars span {
+            margin-right: 5px;
+        }
+        .submit-btn {
+            background-color: #4CAF50; /* Verde de Sucesso */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        #feedback-message {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <img src="logo.png" alt="Vargas Pizzaria Logo" class="logo">
+            <nav>
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="cardapio.html" class="nav-link">Cardápio</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="avaliacao-container">
+            <h1>Sua Opinião Vale Ouro!</h1>
+            <p>Ajude-nos a melhorar. Sua avaliação é fundamental para a qualidade da Vargas Pizzaria.</p>
+
+            <form id="avaliacaoForm">
+                <div class="form-group">
+                    <label for="nome">Seu Nome (Opcional):</label>
+                    <input type="text" id="nome" name="nome">
+                </div>
+
+                <div class="form-group">
+                    <label>Qualidade Geral (Nota de 1 a 5):</label>
+                    <div class="rating-stars" id="quality-rating">
+                        <span data-value="1">★</span><span data-value="2">★</span><span data-value="3">★</span><span data-value="4">★</span><span data-value="5">★</span>
+                    </div>
+                    <input type="hidden" id="nota" name="nota" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="comentario">Comentário (Opcional):</label>
+                    <textarea id="comentario" name="comentario" rows="4" placeholder="O que você achou do nosso serviço ou produto?"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Enviar Avaliação</button>
+            </form>
+            
+            <div id="feedback-message" style="color: #4CAF50;"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Vargas Pizzaria. Gestão Inteligente.</p>
+    </footer>
+
+    <script>
+        // Lógica simples em JS para simular o envio da avaliação
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('avaliacaoForm');
+            const stars = document.querySelectorAll('.rating-stars span');
+            const notaInput = document.getElementById('nota');
+            const feedbackMessage = document.getElementById('feedback-message');
+            
+            let selectedRating = 0;
+
+            // Função para atualizar a cor das estrelas
+            stars.forEach(star => {
+                star.addEventListener('click', function() {
+                    selectedRating = parseInt(this.getAttribute('data-value'));
+                    notaInput.value = selectedRating;
+                    
+                    stars.forEach((s, index) => {
+                        s.style.color = index < selectedRating ? '#FFC107' : '#ccc';
+                    });
+                });
+            });
+
+            // Simular o envio do formulário
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (selectedRating === 0) {
+                    feedbackMessage.textContent = "Por favor, dê uma nota de 1 a 5 estrelas!";
+                    feedbackMessage.style.color = 'red';
+                    return;
+                }
+                
+                // SIMULAÇÃO: No ambiente real, aqui os dados iriam para um banco de dados.
+                // Aqui, apenas confirmamos o envio visualmente.
+
+                feedbackMessage.textContent = `Obrigado por nos avaliar em ${selectedRating} estrelas!`;
+                feedbackMessage.style.color = '#4CAF50';
+                
+                // Limpar formulário após 3 segundos
+                setTimeout(() => {
+                    form.reset();
+                    notaInput.value = '';
+                    stars.forEach(s => s.style.color = '#FFC107'); // Resetar a cor para cinza/padrão
+                    feedbackMessage.textContent = '';
+                    selectedRating = 0;
+                }, 3000); 
+            });
+        });
+    </script>
+</body>
+</html>

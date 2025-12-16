@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Caixa | Vargas Pizzaria</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Cor de destaque para o Caixa (Finanças) */
+        .caixa-header { background-color: #008080; } /* Teal/Verde Água */
+        .caixa-summary { border-left-color: #008080; }
+        .caixa-task-btn { background-color: #009688; } 
+    </style>
+</head>
+<body>
+    <div class="app-layout">
+        <header class="painel-header caixa-header"> 
+            <h1 class="header-title" id="dashboard-title">Painel de Controle - Caixa</h1>
+            <nav class="painel-nav">
+                <a href="#" class="nav-link">Registrar Pagamento</a>
+                <a href="#" class="nav-link">Fechamento do Dia</a>
+                <a href="login.html" class="nav-link logout-btn">Sair</a>
+            </nav>
+        </header>
+
+        <main class="painel-content">
+            <div class="summary-box caixa-summary">
+                <h2>Comandas Pendentes de Pagamento: 2</h2>
+                <p>Valor total a receber: R$ 258,90</p>
+            </div>
+            
+            <section class="action-section">
+                <h3>Ações de Transação</h3>
+                
+                <div class="summary-box" style="border-left-color: #009688;">
+                    <h4>Comanda Pendente #123 (Mesa 5)</h4>
+                    <p>Valor Total: R$ 98,50</p>
+                    <button class="action-btn caixa-task-btn">Processar Cartão / PIX</button>
+                    <button class="action-btn caixa-task-btn" style="background-color: #3f51b5;">Receber Dinheiro</button> 
+                    <button class="action-btn">Emitir Nota Fiscal</button>
+                </div>
+
+                <div class="summary-box" style="border-left-color: #009688;">
+                    <h4>Comanda Pendente #125 (Delivery)</h4>
+                    <p>Valor Total: R$ 160,40</p>
+                    <button class="action-btn caixa-task-btn">Processar Cartão / PIX</button>
+                    <button class="action-btn caixa-task-btn" style="background-color: #3f51b5;">Receber Dinheiro</button> 
+                    <button class="action-btn">Emitir Nota Fiscal</button>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

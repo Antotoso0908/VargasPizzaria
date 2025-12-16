@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Garçom | Vargas Pizzaria</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Cor de destaque para o Garçom */
+        .garcom-header { background-color: #4CAF50; } /* Verde - Ação e Serviço */
+        .garcom-summary { border-left-color: #4CAF50; }
+        .garcom-action-btn { background-color: #66BB6A; }
+    </style>
+</head>
+<body>
+    <div class="app-layout">
+        <header class="painel-header garcom-header">
+            <h1 class="header-title" id="dashboard-title">Painel de Controle - Garçom</h1>
+            <nav class="painel-nav">
+                <a href="#" class="nav-link">Abrir Mesa</a>
+                <a href="#" class="nav-link">Pedidos Pendentes</a>
+                <a href="login.html" class="nav-link logout-btn">Sair</a>
+            </nav>
+        </header>
+
+        <main class="painel-content">
+            <div class="summary-box garcom-summary">
+                <h2>Mesas Ativas: 4</h2>
+                <p>Mesas em Atendimento: 3 | Mesas Aguardando Conta: 1</p>
+            </div>
+            
+            <section class="action-section">
+                <h3>Gerenciamento de Mesas</h3>
+                
+                <div class="summary-box" style="border-left-color: #FFC107;">
+                    <h4>Mesa 5 (2 pessoas) - AGUARDANDO PEDIDO</h4>
+                    <p>Status: Cliente sentou há 5 minutos.</p>
+                    <p style="font-weight: bold;">Itens: (Vazio)</p>
+                    <button class="action-btn garcom-action-btn">Adicionar Item</button>
+                    <button class="action-btn red-btn">Fechar Conta</button>
+                </div>
+                
+                <div class="summary-box" style="border-left-color: #FF9800;">
+                    <h4>Mesa 8 (4 pessoas) - EM PREPARO</h4>
+                    <p>Status: Pedido enviado há 5 minutos</p>
+                    <p style="font-weight: bold;">Itens: Pizza Pepperoni (G), Refri Cola (P)</p> 
+                    <button class="action-btn garcom-action-btn">Adicionar Item</button>
+                    <button class="action-btn red-btn">Fechar Conta</button>
+                </div>
+                
+                <div class="summary-box" style="border-left-color: #008080;">
+                    <h4>Mesa 3 (3 pessoas) - CONTA SOLICITADA</h4>
+                    <p>Status: Aguardando caixa para finalizar pagamento.</p>
+                    <p style="font-weight: bold;">Itens: 2 Pizzas (G), 3 Cervejas</p>
+                    <button class="action-btn" style="background-color: #3f51b5;">Chamar Caixa</button>
+                    <button class="action-btn red-btn">Fechar Conta</button>
+                </div>
+
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
